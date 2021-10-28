@@ -9,7 +9,7 @@ class Login extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('images/login.png'), fit: BoxFit.fill)),
+                image: AssetImage('images/login.png'), fit: BoxFit.scaleDown)),
       ),
     );
   }
