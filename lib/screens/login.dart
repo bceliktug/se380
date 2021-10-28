@@ -6,21 +6,10 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        child: Container(
-          child: Column(
-            children: [
-              Container(
-                height: 400,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('images/login.png'),
-                        fit: BoxFit.fill)),
-              )
-            ],
-          ),
-        ),
+      body: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('images/login.png'), fit: BoxFit.fill)),
       ),
     );
   }
