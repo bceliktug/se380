@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:se380_project/screens/film1.dart';
 
 class Films extends StatelessWidget {
   PageController pageController = PageController(initialPage: 0);
@@ -9,12 +10,7 @@ class Films extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       controller: pageController,
       children: <Widget>[
-        Container(
-          color: Colors.blue,
-          child: Center(
-            child: Text("sayfa1"),
-          ),
-        ),
+        Film1(),
         Container(
           color: Colors.orange,
           child: Center(
