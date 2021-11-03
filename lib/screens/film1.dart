@@ -19,7 +19,7 @@ class Film1 extends StatelessWidget {
               width: 200,
               margin: EdgeInsets.fromLTRB(50, 200, 50, 0),
               decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.white.withOpacity(0.9),
                   borderRadius: BorderRadius.circular(200)),
               child: Column(
                 children: [
