@@ -144,7 +144,6 @@ class Film1 extends StatelessWidget {
                             primary: Colors.black,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18.0),
-                              side: BorderSide(color: Colors.red),
                             ),
                           ),
                         ),
