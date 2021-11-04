@@ -11,7 +11,7 @@ class Film1 extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           image: DecorationImage(
-              image: AssetImage("images/venom2.jpg"), fit: BoxFit.fitHeight),
+              image: AssetImage("images/venom2-1.jpg"), fit: BoxFit.fitHeight),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
