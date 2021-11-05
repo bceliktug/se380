@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:se380_project/screens/details/film1-details.dart';
+import 'package:se380_project/screens/films/CustomPageRoutef.dart';
 
 class Film1 extends StatelessWidget {
   const Film1({Key? key}) : super(key: key);
@@ -17,9 +19,11 @@ class Film1 extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             InkWell(
-              onTap: () {
-                print("container tapped");
-              },
+              onTap: () => Navigator.of(context).push(
+                CustomPageRoutef(
+                  child: Film1D(),
+                ),
+              ),
               child: Container(
                 height: 380,
                 width: 200,

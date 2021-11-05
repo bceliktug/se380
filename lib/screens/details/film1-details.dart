@@ -6,6 +6,9 @@ class Film1D extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+      ),
       child: Text("Detail 1"),
     );
   }
