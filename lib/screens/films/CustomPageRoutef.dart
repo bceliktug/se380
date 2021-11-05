@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// flutterpub.dev den örnek alındı...
+
 class CustomPageRoutef extends PageRouteBuilder {
   final Widget child;
   CustomPageRoutef({
