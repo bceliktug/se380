@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:se380_project/screens/film1.dart';
+import 'package:se380_project/screens/films/film1.dart';
 
 class Films extends StatelessWidget {
   PageController pageController = PageController(initialPage: 0);
