@@ -7,7 +7,7 @@ class CustomPageRoutef extends PageRouteBuilder {
   CustomPageRoutef({
     required this.child,
   }) : super(
-          transitionDuration: Duration(seconds: 1),
+          transitionDuration: Duration(milliseconds: 300),
           pageBuilder: (context, animation, secondaryAnimation) => child,
         );
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:se380_project/screens/details/film1-details.dart';
-import 'package:se380_project/screens/films/CustomPageRoutef.dart';
+import 'package:se380_project/widgets/CustomPageRoutef.dart';
 
 class Film1 extends StatelessWidget {
   const Film1({Key? key}) : super(key: key);
