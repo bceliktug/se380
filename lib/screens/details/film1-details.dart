@@ -8,8 +8,12 @@ class Film1D extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
+        image: DecorationImage(
+            image: AssetImage("images/venom2bg.jpg"), fit: BoxFit.fill),
       ),
-      child: Text("Detail 1"),
+      child: Container(
+        child: Text("hi man"),
+      ),
     );
   }
 }

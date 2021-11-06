@@ -13,7 +13,7 @@ class Film1 extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           image: DecorationImage(
-              image: AssetImage("images/venom2-1.jpg"), fit: BoxFit.fill),
+              image: AssetImage("images/venom2bg.jpg"), fit: BoxFit.fitHeight),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -36,7 +36,7 @@ class Film1 extends StatelessWidget {
                       blurRadius: 2,
                     ),
                   ],
-                  color: Colors.white.withOpacity(0.9),
+                  color: Colors.white.withOpacity(0.8),
                   borderRadius: BorderRadius.circular(200),
                 ),
                 child: Column(
@@ -48,8 +48,8 @@ class Film1 extends StatelessWidget {
                       width: 25,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                            image: AssetImage("images/venom2-a.jpg"),
-                            fit: BoxFit.fill),
+                            image: AssetImage("images/venom2-sa.png"),
+                            fit: BoxFit.fitHeight),
                         color: Colors.black,
                         borderRadius: BorderRadius.circular(200),
                       ),
