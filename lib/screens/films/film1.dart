@@ -10,7 +10,7 @@ class Film1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.white,
           image: DecorationImage(
               image: AssetImage("images/venom2bg.jpg"), fit: BoxFit.fitHeight),
@@ -25,7 +25,7 @@ class Film1 extends StatelessWidget {
                 ),
               ),
               child: Container(
-                height: 380,
+                height: 470,
                 width: 200,
                 margin: EdgeInsets.fromLTRB(50, 200, 50, 0),
                 decoration: BoxDecoration(
@@ -67,13 +67,14 @@ class Film1 extends StatelessWidget {
                     Column(
                       children: [
                         Container(
-                          padding: EdgeInsets.only(top: 20),
+                          padding: EdgeInsets.only(top: 40),
                           child: Text(
                             "IMDB Point:",
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                         ),
                         Container(
+                          padding: EdgeInsets.only(top: 20),
                           child: RatingBar.builder(
                             //flutter pub.dev'den alındı
                             itemSize: 30,
@@ -93,7 +94,7 @@ class Film1 extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          padding: EdgeInsets.only(top: 10),
+                          padding: EdgeInsets.only(top: 25),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
@@ -140,7 +141,7 @@ class Film1 extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          padding: EdgeInsets.only(top: 10),
+                          padding: EdgeInsets.only(top: 30),
                           child: ElevatedButton(
                             onPressed: () {}, //eklencek
                             child: Text(
