@@ -13,7 +13,7 @@ class Film1D extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Container(
-              height: 200,
+              height: 300,
               decoration: BoxDecoration(color: Colors.red),
               child: Text(
                 "video",
@@ -167,86 +167,98 @@ class Film1D extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(
-                          image: AssetImage("images/wd_photo.jpg"),
-                          fit: BoxFit.fill),
-                      color: Colors.amber,
-                    ),
-                    margin: EdgeInsets.all(10),
-                    width: 90,
-                    height: 100,
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(5, 65, 10, 5),
-                      child: Text(
-                        "Woody \nHarrelson",
-                        style: GoogleFonts.actor(color: Colors.white),
+                  Column(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(
+                              image: AssetImage("images/wd_photo.jpg"),
+                              fit: BoxFit.fill),
+                          color: Colors.amber,
+                        ),
+                        margin: EdgeInsets.all(10),
+                        width: 90,
+                        height: 100,
                       ),
-                    ),
+                      Text(
+                        "Woody Harrelson",
+                        style: GoogleFonts.actor(color: Colors.black),
+                      ),
+                    ],
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(
-                          image: AssetImage("images/mw_photo.jpg"),
-                          fit: BoxFit.fill),
-                      color: Colors.amber,
-                    ),
-                    margin: EdgeInsets.all(10),
-                    width: 90,
-                    height: 100,
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(5, 65, 10, 5),
-                      child: Text(
-                        "Michelle \nWilliams",
-                        style: GoogleFonts.actor(color: Colors.white),
+                  Column(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(
+                              image: AssetImage("images/mw_photo.jpg"),
+                              fit: BoxFit.fill),
+                          color: Colors.amber,
+                        ),
+                        margin: EdgeInsets.all(10),
+                        width: 90,
+                        height: 100,
                       ),
-                    ),
+                      Text(
+                        "Michelle Williams",
+                        style: GoogleFonts.actor(color: Colors.black),
+                      ),
+                    ],
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(
-                          image: AssetImage("images/nh_photo.jpg"),
-                          fit: BoxFit.fill),
-                      color: Colors.amber,
-                    ),
-                    margin: EdgeInsets.all(10),
-                    width: 90,
-                    height: 100,
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(5, 65, 10, 5),
-                      child: Text(
-                        "Naomie \nHarris",
-                        style: GoogleFonts.actor(color: Colors.white),
+                  Column(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(
+                              image: AssetImage("images/nh_photo.jpg"),
+                              fit: BoxFit.fill),
+                          color: Colors.amber,
+                        ),
+                        margin: EdgeInsets.all(10),
+                        width: 90,
+                        height: 100,
                       ),
-                    ),
+                      Text(
+                        "Naomie Harris",
+                        style: GoogleFonts.actor(color: Colors.black),
+                      ),
+                    ],
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(
-                          image: AssetImage("images/sg_photo.jpg"),
-                          fit: BoxFit.fill),
-                      color: Colors.amber,
-                    ),
-                    margin: EdgeInsets.all(10),
-                    width: 90,
-                    height: 100,
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(5, 65, 10, 5),
-                      child: Text(
-                        "Stephen \nGraham",
-                        style: GoogleFonts.actor(color: Colors.white),
+                  Column(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(
+                              image: AssetImage("images/sg_photo.jpg"),
+                              fit: BoxFit.fill),
+                          color: Colors.amber,
+                        ),
+                        margin: EdgeInsets.all(10),
+                        width: 90,
+                        height: 100,
                       ),
-                    ),
+                      Text(
+                        "Stephen Graham",
+                        style: GoogleFonts.actor(color: Colors.black),
+                      ),
+                    ],
                   ),
                 ],
               ),
             ),
-            Container()
+            Container(
+              margin: EdgeInsets.fromLTRB(25, 50, 25, 25),
+              height: 300,
+              width: 100,
+              decoration: BoxDecoration(
+                  color: Colors.grey.shade200,
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: Colors.grey.shade500)),
+            )
           ],
         ),
       ),
