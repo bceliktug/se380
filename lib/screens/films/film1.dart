@@ -44,7 +44,7 @@ class Film1 extends StatelessWidget {
                   children: [
                     Container(
                       margin: EdgeInsets.fromLTRB(60, 10, 60, 0),
-                      height: 185,
+                      height: 270,
                       width: 25,
                       decoration: BoxDecoration(
                         image: DecorationImage(
@@ -67,14 +67,14 @@ class Film1 extends StatelessWidget {
                     Column(
                       children: [
                         Container(
-                          padding: EdgeInsets.only(top: 40),
+                          padding: EdgeInsets.only(top: 5),
                           child: Text(
                             "IMDB Point:",
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                         ),
                         Container(
-                          padding: EdgeInsets.only(top: 20),
+                          padding: EdgeInsets.only(top: 5),
                           child: RatingBar.builder(
                             //flutter pub.dev'den alındı
                             itemSize: 30,
@@ -94,7 +94,7 @@ class Film1 extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          padding: EdgeInsets.only(top: 25),
+                          padding: EdgeInsets.only(top: 5),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [

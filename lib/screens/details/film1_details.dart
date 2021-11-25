@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:se380_project/widgets/video.dart';
+
 
 class Film1D extends StatelessWidget {
   const Film1D({Key? key}) : super(key: key);
@@ -15,10 +17,7 @@ class Film1D extends StatelessWidget {
             Container(
               height: 300,
               decoration: BoxDecoration(color: Colors.red),
-              child: Text(
-                "video",
-                style: TextStyle(color: Colors.white),
-              ),
+              child: VideoC(url: "https://www.youtube.com/watch?v=-FmWuCgJmxo")
             ),
             Container(
               decoration: BoxDecoration(color: Colors.white),
@@ -114,23 +113,6 @@ class Film1D extends StatelessWidget {
                       ],
                     ),
                   ),
-
-                  /* Container(
-                    padding: EdgeInsets.only(top: 10),
-                    child: ElevatedButton(
-                      onPressed: () {}, //eklencek
-                      child: Text(
-                        "BOOK NOW",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        primary: Colors.black,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0),
-                        ),
-                      ),
-                    ),
-                  )*/
                 ],
               ),
             ),
@@ -252,12 +234,107 @@ class Film1D extends StatelessWidget {
             ),
             Container(
               margin: EdgeInsets.fromLTRB(25, 50, 25, 25),
-              height: 300,
+              height: 200,
               width: 100,
               decoration: BoxDecoration(
                   color: Colors.grey.shade200,
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(color: Colors.grey.shade500)),
+              child: Column(
+                children: [
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    alignment: FractionalOffset(0.0, 1.0),
+                    child: Row(children: [
+                      Text("Directed By : ",
+                          style: GoogleFonts.actor(
+                              fontWeight: FontWeight.bold, fontSize: 16)),
+                      Text(
+                        "Andy Serkis",
+                        style: GoogleFonts.actor(fontSize: 16),
+                      )
+                    ]),
+                  ),
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    alignment: FractionalOffset(0.0, 1.0),
+                    child: Row(children: [
+                      Text("Year : ",
+                          style: GoogleFonts.actor(
+                              fontWeight: FontWeight.bold, fontSize: 16)),
+                      Text(
+                        "2021",
+                        style: GoogleFonts.actor(fontSize: 16),
+                      )
+                    ]),
+                  ),
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    alignment: FractionalOffset(0.0, 1.0),
+                    child: Row(children: [
+                      Text("Duration : ",
+                          style: GoogleFonts.actor(
+                              fontWeight: FontWeight.bold, fontSize: 16)),
+                      Text(
+                        "1h 37m",
+                        style: GoogleFonts.actor(fontSize: 16),
+                      )
+                    ]),
+                  ),
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    alignment: FractionalOffset(0.0, 1.0),
+                    child: Row(children: [
+                      Text("Production : ",
+                          style: GoogleFonts.actor(
+                              fontWeight: FontWeight.bold, fontSize: 16)),
+                      Text(
+                        "Marvel Entertainment, \nPascal Pictures, \nSony Pictures Entertainment (SPE)",
+                        style: GoogleFonts.actor(fontSize: 16),
+                      )
+                    ]),
+                  )
+                ],
+              ),
+            ),
+            Column(
+              children: [
+                Container(
+                  alignment: new FractionalOffset(0.0, 1.0),
+                  margin: EdgeInsets.only(left: 20),
+                  child: Text(
+                    "Storyline",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(20, 15, 20, 15),
+                  child: Text(
+                    "Eddie Brock struggles to adjust to his new life as the host of the alien symbiote Venom, which grants him super-human abilities in order to be a lethal vigilante. Brock attempts to reignite his career by interviewing serial killer Cletus Kasady, who becomes the host of the symbiote Carnage and escapes prison after a failed execution.",
+                    style: TextStyle(
+                      color: Colors.grey.shade700,
+                      fontSize: 20,
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Container(
+              height: 100,
+              padding: EdgeInsets.fromLTRB(30, 20, 30, 20),
+              child: ElevatedButton(
+                onPressed: () {}, //eklencek
+                child: Text(
+                  "BOOK NOW",
+                  style: TextStyle(color: Colors.white, fontSize: 18),
+                ),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.black,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.0),
+                  ),
+                ),
+              ),
             )
           ],
         ),
