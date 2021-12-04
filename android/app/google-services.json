@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "264235351355",
+    "project_id": "cinefuture-bb058",
+    "storage_bucket": "cinefuture-bb058.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:264235351355:android:aa7b3327c09fc99cb30b1e",
+        "android_client_info": {
+          "package_name": "com.example.se380_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "264235351355-eenlksjp2n731db9m5nokgjtnt42c5d6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.se380_project",
+            "certificate_hash": "6462706209ecd3061a21ab56db1d1fd040890c30"
+          }
+        },
+        {
+          "client_id": "264235351355-i5jb7ras8906lsfgu81l867r2k0k1lor.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCc5tBYx6fDqzjFQ-JKTkQmMd7GTo0MLjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "264235351355-i5jb7ras8906lsfgu81l867r2k0k1lor.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

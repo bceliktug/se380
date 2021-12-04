@@ -1,7 +1,17 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:se380_project/widgets/films.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  late String _email, _password;
+  final auth = FirebaseAuth.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +49,7 @@ class Login extends StatelessWidget {
                           ),
                         ),
                         child: TextField(
+                          keyboardType: TextInputType.emailAddress,
                           decoration: InputDecoration(
                             border: InputBorder.none,
                             hintText: "Email",
@@ -48,17 +59,28 @@ class Login extends StatelessWidget {
                             contentPadding:
                                 new EdgeInsets.fromLTRB(20, 10, 100, 10),
                           ),
+                          onChanged: (value) {
+                            setState(() {
+                              _email = value.trim();
+                            });
+                          },
                         ),
                       ),
                       Container(
                         padding: EdgeInsets.all(8.0),
                         child: TextField(
+                          obscureText: true,
                           decoration: InputDecoration(
                               border: InputBorder.none,
                               hintText: "Password",
                               hintStyle: TextStyle(color: Colors.grey[400]),
                               contentPadding:
                                   new EdgeInsets.fromLTRB(20, 10, 100, 10)),
+                          onChanged: (value) {
+                            setState(() {
+                              _password = value.trim();
+                            });
+                          },
                         ),
                       ),
                     ],
@@ -75,13 +97,32 @@ class Login extends StatelessWidget {
                     ),
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.only(top: 1),
-                  child: ElevatedButton(
-                    child: Text("Sign In"),
-                    onPressed: null,
-                  ),
-                )
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    ElevatedButton(
+                      child: Text("Login"),
+                      onPressed: () {
+                        auth.signInWithEmailAndPassword(
+                            email: _email, password: _password);
+                        Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(builder: (context) => Films()),
+                        );
+                      },
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        auth.createUserWithEmailAndPassword(
+                            email: _email, password: _password);
+                        Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(
+                              builder: (context) => const Login()),
+                        );
+                      },
+                      child: Text("Sign Up"),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
