@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class Film1D extends StatelessWidget {
+class Film1D extends StatefulWidget {
   const Film1D({Key? key}) : super(key: key);
+
+  @override
+  State<Film1D> createState() => _Film1DState();
+}
+
+class _Film1DState extends State<Film1D> {
+  YoutubePlayerController _controller = YoutubePlayerController(
+      initialVideoId: "-FmWuCgJmxo", flags: YoutubePlayerFlags(autoPlay: true));
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +24,11 @@ class Film1D extends StatelessWidget {
             Container(
                 height: 300,
                 decoration: BoxDecoration(color: Colors.red),
-                child: Text("Video bas")),
+                child: YoutubePlayer(
+                  controller: _controller,
+                  showVideoProgressIndicator: true,
+                  progressIndicatorColor: Colors.redAccent,
+                )),
             Container(
               decoration: BoxDecoration(color: Colors.white),
               child: Column(
