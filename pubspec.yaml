@@ -42,6 +42,11 @@ dependencies:
   cloud_firestore: ^3.1.1
   provider: ^6.0.1
   youtube_player_flutter: ^8.0.0
+  badges: any
+flutter_hooks: ^0.14.0
+hooks_riverpod: ^0.10.1
+uuid: any
+provider: any
 
 dev_dependencies:
   flutter_test:
