@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:se380_project/screens/details/film1_details.dart';
 import 'package:se380_project/widgets/CustomPageRoutef.dart';
+import 'package:se380_project/screens/book/Booknow.dart';
 
 class Film1 extends StatelessWidget {
   const Film1({Key? key}) : super(key: key);
@@ -143,7 +144,10 @@ class Film1 extends StatelessWidget {
                         Container(
                           padding: EdgeInsets.only(top: 10),
                           child: ElevatedButton(
-                            onPressed: () {}, //eklencek
+                            onPressed: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => Booknow()));
+                            }, //eklencek
                             child: Text(
                               "BOOK NOW",
                               style: TextStyle(color: Colors.white),
