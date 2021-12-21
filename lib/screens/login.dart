@@ -17,8 +17,8 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-            image: DecorationImage(
+        decoration: const BoxDecoration(
+             image:  DecorationImage(
                 image: AssetImage("images/login.jpg"), fit: BoxFit.fill)),
         child: Container(
           child: Center(
@@ -32,7 +32,7 @@ class _LoginState extends State<Login> {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(200),
                     boxShadow: [
-                      BoxShadow(
+                       BoxShadow(
                         color: Color.fromRGBO(143, 148, 251, .2),
                         blurRadius: 20.0,
                         offset: Offset(0, 10),

@@ -49,7 +49,6 @@ hooks_riverpod: ^0.10.1
 uuid: any
 provider: any
 
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
