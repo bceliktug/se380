@@ -1,4 +1,4 @@
-enum ReserveState { available, reserved, selected }
+/*enum ReserveState { available, reserved, selected }
 
 class Chair {
   ReserveState reserveState;
@@ -103,3 +103,4 @@ List<Chair> chairRow6 = [
   Chair(6, 17, reserveState: ReserveState.available),
   Chair(6, 18, reserveState: ReserveState.reserved),
 ];
+*/

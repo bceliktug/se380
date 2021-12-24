@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+/*import 'package:flutter/foundation.dart';
 import 'package:se380_project/screens/book/chair.dart';
 
 class CinemaProvider with ChangeNotifier {
@@ -28,3 +28,4 @@ class CinemaProvider with ChangeNotifier {
     return s;
   }
 }
+*/
