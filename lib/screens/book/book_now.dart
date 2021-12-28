@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:se380_project/widgets/datetime_model.dart';
 
 class Booknow extends StatefulWidget {
-  const Booknow({
+  Booknow({
     Key? key,
     required this.movieName,
   }) : super(key: key);
@@ -16,6 +16,7 @@ class Booknow extends StatefulWidget {
 class _BooknowState extends State<Booknow> {
   String movieName;
   _BooknowState(this.movieName);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,6 +76,8 @@ class _BooknowState extends State<Booknow> {
         ),
         Positioned(
           top: 100,
+          left: 0,
+          right: 0,
           child: Container(
             padding: EdgeInsets.only(left: 20.0),
             height: 90,
@@ -85,40 +88,104 @@ class _BooknowState extends State<Booknow> {
               itemCount: DateTimeModel.listDate.length,
               itemBuilder: (context, index) {
                 return InkWell(
-                  child: SizedBox(
-                    height: 100,
-                    width: 75,
-                    child: Column(
-                      children: [
-                        const Icon(
-                          Icons.calendar_today,
-                          color: Colors.white,
-                          size: 12,
+                  onTap: () {
+                    setState(() {
+                      DateTimeModel.listDate[index].selected =
+                          !DateTimeModel.listDate[index].selected;
+                    });
+                  }, //======>>>> tek item seçilcek Hocaya sorulcak <<<<======
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 10),
+                    child: SizedBox(
+                      height: 100,
+                      width: 75,
+                      child: DecoratedBox(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: DateTimeModel.listDate[index].selected
+                              ? Colors.amber.withOpacity(.4)
+                              : Colors.white.withOpacity(.2),
                         ),
-                        const SizedBox(
-                          height: 10,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Icon(
+                              Icons.calendar_today,
+                              color: Colors.white,
+                              size: 12,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              DateTimeModel.listDate[index].day,
+                              style: const TextStyle(
+                                  color: Colors.white, fontSize: 17),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              DateTimeModel.listDate[index].number,
+                              style: const TextStyle(
+                                  color: Colors.white, fontSize: 30),
+                            )
+                          ],
                         ),
-                        Text(
-                          DateTimeModel.listDate[index].day,
-                          style: const TextStyle(
-                              color: Colors.white, fontSize: 17),
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          DateTimeModel.listDate[index].number,
-                          style: const TextStyle(
-                              color: Colors.white, fontSize: 30),
-                        )
-                      ],
+                      ),
                     ),
                   ),
                 );
               },
             ),
           ),
-        )
+        ),
+        Positioned(
+          top: 210,
+          left: 0,
+          right: 0,
+          child: Container(
+            padding: EdgeInsets.only(left: 20),
+            height: 40,
+            width: 100,
+            child: ListView.builder(
+              physics: BouncingScrollPhysics(),
+              scrollDirection: Axis.horizontal,
+              itemCount: Time.listTime.length,
+              itemBuilder: (context, index) {
+                return InkWell(
+                  onTap: () {
+                    setState(() {
+                      Time.listTime[index].selected =
+                          !Time.listTime[index].selected;
+                    });
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 10),
+                    child: SizedBox(
+                      height: 100,
+                      width: 75,
+                      child: DecoratedBox(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Time.listTime[index].selected
+                              ? Colors.amber.withOpacity(.4)
+                              : Colors.grey.withOpacity(.7),
+                        ),
+                        child: Center(
+                          child: Text(
+                            Time.listTime[index].time,
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
+        ),
       ],
     ));
   }
