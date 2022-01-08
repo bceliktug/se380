@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:se380_project/widgets/cine_screen.dart';
 import 'package:se380_project/widgets/datetime_model.dart';
 
 class Booknow extends StatefulWidget {
@@ -80,7 +81,7 @@ class _BooknowState extends State<Booknow> {
           right: 0,
           child: Container(
             padding: EdgeInsets.only(left: 20.0),
-            height: 90,
+            height: 80,
             width: 15,
             child: ListView.builder(
               physics: BouncingScrollPhysics(),
@@ -120,7 +121,7 @@ class _BooknowState extends State<Booknow> {
                             Text(
                               DateTimeModel.listDate[index].day,
                               style: const TextStyle(
-                                  color: Colors.white, fontSize: 17),
+                                  color: Colors.white, fontSize: 15),
                             ),
                             const SizedBox(
                               height: 10,
@@ -128,7 +129,7 @@ class _BooknowState extends State<Booknow> {
                             Text(
                               DateTimeModel.listDate[index].number,
                               style: const TextStyle(
-                                  color: Colors.white, fontSize: 30),
+                                  color: Colors.white, fontSize: 25),
                             )
                           ],
                         ),
@@ -141,7 +142,7 @@ class _BooknowState extends State<Booknow> {
           ),
         ),
         Positioned(
-          top: 210,
+          top: 190,
           left: 0,
           right: 0,
           child: Container(
@@ -186,6 +187,20 @@ class _BooknowState extends State<Booknow> {
             ),
           ),
         ),
+        SizedBox(height: 15.0),
+        Container(
+          padding: EdgeInsets.fromLTRB(40, 210, 0, 100),
+          child: CineScreen(),
+        ),
+        Container(
+          padding: EdgeInsets.symmetric(vertical: 270, horizontal: 180),
+          child: Text(
+            "Screen",
+            style: TextStyle(
+                color: Colors.black, fontWeight: FontWeight.bold, fontSize: 16),
+          ),
+        ),
+        
       ],
     ));
   }
