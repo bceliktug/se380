@@ -4,20 +4,21 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:se380_project/screens/book/book_now.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class Film1D extends StatefulWidget {
-  const Film1D({Key? key}) : super(key: key);
+class Film3D extends StatefulWidget {
+  Film3D({Key? key}) : super(key: key);
 
   @override
-  State<Film1D> createState() => _Film1DState();
+  _Film3DState createState() => _Film3DState();
 }
 
-class _Film1DState extends State<Film1D> {
+class _Film3DState extends State<Film3D> {
   YoutubePlayerController _controller = YoutubePlayerController(
-      initialVideoId: "-FmWuCgJmxo",
+      initialVideoId: "Wd2CzMcswZg",
       flags: YoutubePlayerFlags(autoPlay: false));
-  String filmName = 'Venom 2';
+
   @override
   Widget build(BuildContext context) {
+    String filmName = 'Matrix Resurrections';
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -39,7 +40,7 @@ class _Film1DState extends State<Film1D> {
                     child: Container(
                       padding: EdgeInsets.only(top: 15),
                       child: Text(
-                        "Venom: Let There Be Carnage",
+                        "Matrix Resurrections",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
@@ -65,7 +66,7 @@ class _Film1DState extends State<Film1D> {
                     child: RatingBar.builder(
                       //flutter pub.dev'den alındı
                       itemSize: 30,
-                      initialRating: 3.5,
+                      initialRating: 2.5,
                       minRating: 1,
                       direction: Axis.horizontal,
                       allowHalfRating: true,
@@ -88,11 +89,6 @@ class _Film1DState extends State<Film1D> {
                         Container(
                           padding: EdgeInsets.fromLTRB(3, 3, 3, 3),
                           decoration: BoxDecoration(
-                            /* boxShadow: [
-                                      BoxShadow(
-                                        color: Colors.black.withOpacity(0.5),
-                                      ),
-                                    ],*/
                             border: Border.all(color: Colors.grey),
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(200),
@@ -109,16 +105,6 @@ class _Film1DState extends State<Film1D> {
                             borderRadius: BorderRadius.circular(200),
                           ),
                           padding: EdgeInsets.fromLTRB(3, 3, 3, 3),
-                          child: Text("Adventure",
-                              style: TextStyle(fontWeight: FontWeight.bold)),
-                        ),
-                        Container(
-                          padding: EdgeInsets.fromLTRB(3, 3, 3, 3),
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey),
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(200),
-                          ),
                           child: Text("Sci-Fi",
                               style: TextStyle(fontWeight: FontWeight.bold)),
                         ),
@@ -147,7 +133,7 @@ class _Film1DState extends State<Film1D> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage("images/tm_photo.jpg"),
+                              image: AssetImage("images/KeanuR.jpg"),
                               fit: BoxFit.fill),
                           color: Colors.amber,
                         ),
@@ -156,7 +142,7 @@ class _Film1DState extends State<Film1D> {
                         height: 100,
                       ),
                       Text(
-                        "Tom Hardy",
+                        "Keanu Reeves",
                         style: GoogleFonts.actor(color: Colors.black),
                       ),
                     ],
@@ -167,7 +153,7 @@ class _Film1DState extends State<Film1D> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage("images/wd_photo.jpg"),
+                              image: AssetImage("images/CarrieA.jpg"),
                               fit: BoxFit.fill),
                           color: Colors.amber,
                         ),
@@ -176,7 +162,7 @@ class _Film1DState extends State<Film1D> {
                         height: 100,
                       ),
                       Text(
-                        "Woody Harrelson",
+                        "Carrie-Anne Moss",
                         style: GoogleFonts.actor(color: Colors.black),
                       ),
                     ],
@@ -187,7 +173,7 @@ class _Film1DState extends State<Film1D> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage("images/mw_photo.jpg"),
+                              image: AssetImage("images/YahyaA.jpg"),
                               fit: BoxFit.fill),
                           color: Colors.amber,
                         ),
@@ -196,7 +182,7 @@ class _Film1DState extends State<Film1D> {
                         height: 100,
                       ),
                       Text(
-                        "Michelle Williams",
+                        "Yahya Abdul-Mateen II",
                         style: GoogleFonts.actor(color: Colors.black),
                       ),
                     ],
@@ -207,7 +193,7 @@ class _Film1DState extends State<Film1D> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage("images/nh_photo.jpg"),
+                              image: AssetImage("images/JessicaH.jpg"),
                               fit: BoxFit.fill),
                           color: Colors.amber,
                         ),
@@ -216,27 +202,7 @@ class _Film1DState extends State<Film1D> {
                         height: 100,
                       ),
                       Text(
-                        "Naomie Harris",
-                        style: GoogleFonts.actor(color: Colors.black),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          image: DecorationImage(
-                              image: AssetImage("images/sg_photo.jpg"),
-                              fit: BoxFit.fill),
-                          color: Colors.amber,
-                        ),
-                        margin: EdgeInsets.all(10),
-                        width: 90,
-                        height: 100,
-                      ),
-                      Text(
-                        "Stephen Graham",
+                        "Jessica Henwick",
                         style: GoogleFonts.actor(color: Colors.black),
                       ),
                     ],
@@ -262,7 +228,7 @@ class _Film1DState extends State<Film1D> {
                           style: GoogleFonts.actor(
                               fontWeight: FontWeight.bold, fontSize: 16)),
                       Text(
-                        "Andy Serkis",
+                        "Lana Wachowski",
                         style: GoogleFonts.actor(fontSize: 16),
                       )
                     ]),
@@ -288,7 +254,7 @@ class _Film1DState extends State<Film1D> {
                           style: GoogleFonts.actor(
                               fontWeight: FontWeight.bold, fontSize: 16)),
                       Text(
-                        "1h 37m",
+                        "2h 28m",
                         style: GoogleFonts.actor(fontSize: 16),
                       )
                     ]),
@@ -301,7 +267,7 @@ class _Film1DState extends State<Film1D> {
                           style: GoogleFonts.actor(
                               fontWeight: FontWeight.bold, fontSize: 16)),
                       Text(
-                        "Marvel Entertainment, \nPascal Pictures, \nSony Pictures Entertainment (SPE)",
+                        "Warner Bros, \nVillage Roadshow Pictures, \nVenus Castina Productions",
                         style: GoogleFonts.actor(fontSize: 16),
                       )
                     ]),
@@ -322,7 +288,7 @@ class _Film1DState extends State<Film1D> {
                 Container(
                   margin: EdgeInsets.fromLTRB(20, 15, 20, 15),
                   child: Text(
-                    "Eddie Brock struggles to adjust to his new life as the host of the alien symbiote Venom, which grants him super-human abilities in order to be a lethal vigilante. Brock attempts to reignite his career by interviewing serial killer Cletus Kasady, who becomes the host of the symbiote Carnage and escapes prison after a failed execution.",
+                    "Return to a world of two realities: one, everyday life; the other, what lies behind it. To find out if his reality is a construct, to truly know himself, Mr. Anderson will have to choose to follow the white rabbit once more.",
                     style: TextStyle(
                       color: Colors.grey.shade700,
                       fontSize: 20,
@@ -343,7 +309,7 @@ class _Film1DState extends State<Film1D> {
                       ),
                     ),
                   );
-                }, //eklencek
+                },
                 child: Text(
                   "BOOK NOW",
                   style: TextStyle(color: Colors.white, fontSize: 18),

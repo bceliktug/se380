@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:se380_project/screens/details/film1_details.dart';
+import 'package:se380_project/screens/details/fiml2_details.dart';
 import 'package:se380_project/widgets/CustomPageRoutef.dart';
 import 'package:se380_project/screens/book/book_now.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-class Film1 extends StatelessWidget {
-  const Film1({Key? key}) : super(key: key);
+class Film2 extends StatelessWidget {
+  const Film2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    String filmName = 'Venom 2';
-
+    String filmName = 'Spider-Man: No Way Home';
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
           color: Colors.white,
           image: DecorationImage(
-              image: AssetImage("images/venom2bg.jpg"), fit: BoxFit.fitHeight),
+              image: AssetImage("images/spiderman1.jpeg"),
+              fit: BoxFit.fitHeight),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -24,7 +24,7 @@ class Film1 extends StatelessWidget {
             InkWell(
               onTap: () => Navigator.of(context).push(
                 CustomPageRoutef(
-                  child: Film1D(),
+                  child: Film2D(),
                 ),
               ),
               child: Container(
@@ -51,7 +51,7 @@ class Film1 extends StatelessWidget {
                       width: 25,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                            image: AssetImage("images/venom2-sa.png"),
+                            image: AssetImage("images/spiderman.jpg"),
                             fit: BoxFit.fitHeight),
                         color: Colors.black,
                         borderRadius: BorderRadius.circular(200),
@@ -61,7 +61,7 @@ class Film1 extends StatelessWidget {
                       child: Container(
                         padding: EdgeInsets.only(top: 5),
                         child: Text(
-                          "Venom: Let There Be Carnage",
+                          "Spider-Man: No Way Home",
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 18),
                         ),
@@ -81,7 +81,7 @@ class Film1 extends StatelessWidget {
                           child: RatingBar.builder(
                             //flutter pub.dev'den alındı
                             itemSize: 30,
-                            initialRating: 3.5,
+                            initialRating: 4.5,
                             minRating: 1,
                             direction: Axis.horizontal,
                             allowHalfRating: true,
@@ -104,11 +104,6 @@ class Film1 extends StatelessWidget {
                               Container(
                                 padding: EdgeInsets.fromLTRB(3, 3, 3, 3),
                                 decoration: BoxDecoration(
-                                  /* boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black.withOpacity(0.5),
-                                    ),
-                                  ],*/
                                   border: Border.all(color: Colors.grey),
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(200),
@@ -136,7 +131,7 @@ class Film1 extends StatelessWidget {
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(200),
                                 ),
-                                child: Text("Sci-Fi",
+                                child: Text("Fantasy",
                                     style:
                                         TextStyle(fontWeight: FontWeight.bold)),
                               ),
