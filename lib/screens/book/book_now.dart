@@ -325,7 +325,7 @@ class _BooknowState extends State<Booknow> {
                   child: Container(
                     margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
                     child: Text(
-                      "Price: $totalPrice",
+                      "Price: $totalPrice  \$",
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
