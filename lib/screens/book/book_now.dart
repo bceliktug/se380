@@ -320,14 +320,14 @@ class _BooknowState extends State<Booknow> {
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: Colors.white,
+                    color: Colors.white.withOpacity(.1),
                   ),
                   child: Container(
                     margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
                     child: Text(
                       "Price: $totalPrice",
                       style: TextStyle(
-                          color: Colors.yellow,
+                          color: Colors.white,
                           fontWeight: FontWeight.bold,
                           fontSize: 25),
                     ),
@@ -335,7 +335,7 @@ class _BooknowState extends State<Booknow> {
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.white,
+                    primary: Colors.white.withOpacity(.1),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0),
                     ),
@@ -345,7 +345,7 @@ class _BooknowState extends State<Booknow> {
                     child: Text(
                       "Pay",
                       style: TextStyle(
-                          color: Colors.yellow,
+                          color: Colors.green,
                           fontWeight: FontWeight.bold,
                           fontSize: 25),
                     ),
