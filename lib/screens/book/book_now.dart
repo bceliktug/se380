@@ -35,9 +35,7 @@ class _BooknowState extends State<Booknow> {
       setTotalPrice = totalPrice - 5;
     }
     //print("updated price : $totalPrice ");
-    setState(() {
-      
-    });
+    setState(() {});
   }
 
   @override
@@ -362,6 +360,12 @@ class _BooknowState extends State<Booknow> {
     );
   }
 }
+
+
+
+
+
+
 
 /*class _ItemDate extends StatelessWidget {
   final DateTimeModel date;
