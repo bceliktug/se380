@@ -19,7 +19,7 @@ class _LoginState extends State<Login> {
       body: Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("images/login.jpg"), fit: BoxFit.fill)),
+                image: AssetImage("images/cineFuture.jpg"), fit: BoxFit.fill)),
         child: Container(
           child: Center(
             child: Column(
@@ -29,7 +29,7 @@ class _LoginState extends State<Login> {
                 Container(
                   padding: EdgeInsets.all(5),
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.white.withOpacity(.4),
                     borderRadius: BorderRadius.circular(200),
                     boxShadow: [
                       BoxShadow(
@@ -45,7 +45,8 @@ class _LoginState extends State<Login> {
                         padding: EdgeInsets.all(8.0),
                         decoration: BoxDecoration(
                           border: Border(
-                            bottom: BorderSide(color: Colors.grey.shade100),
+                            bottom:
+                                BorderSide(color: Colors.grey.withOpacity(.9)),
                           ),
                         ),
                         child: TextField(
@@ -54,7 +55,7 @@ class _LoginState extends State<Login> {
                             border: InputBorder.none,
                             hintText: "Email",
                             hintStyle: TextStyle(
-                              color: Colors.grey[400],
+                              color: Colors.white,
                             ),
                             contentPadding:
                                 new EdgeInsets.fromLTRB(20, 10, 100, 10),
@@ -73,7 +74,7 @@ class _LoginState extends State<Login> {
                           decoration: InputDecoration(
                               border: InputBorder.none,
                               hintText: "Password",
-                              hintStyle: TextStyle(color: Colors.grey[400]),
+                              hintStyle: TextStyle(color: Colors.white),
                               contentPadding:
                                   new EdgeInsets.fromLTRB(20, 10, 100, 10)),
                           onChanged: (value) {
@@ -86,22 +87,16 @@ class _LoginState extends State<Login> {
                     ],
                   ),
                 ),
-                Container(
-                  child: TextButton(
-                    onPressed: null,
-                    child: Text(
-                      "Forgot Password",
-                      style: TextStyle(
-                        color: Colors.purple.shade900,
-                      ),
-                    ),
-                  ),
-                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     ElevatedButton(
-                      child: Text("Login"),
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.black.withOpacity(.1),
+                      ),
+                      child: Text(
+                        "Login",
+                      ),
                       onPressed: () {
                         auth.signInWithEmailAndPassword(
                             email: _email, password: _password);
@@ -111,6 +106,9 @@ class _LoginState extends State<Login> {
                       },
                     ),
                     ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.black.withOpacity(.1),
+                      ),
                       onPressed: () {
                         auth.createUserWithEmailAndPassword(
                             email: _email, password: _password);
@@ -123,6 +121,18 @@ class _LoginState extends State<Login> {
                     ),
                   ],
                 ),
+                Container(
+                  margin: EdgeInsets.only(top: 50),
+                  child: TextButton(
+                    onPressed: null,
+                    child: Text(
+                      "Forgot Password",
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                )
               ],
             ),
           ),

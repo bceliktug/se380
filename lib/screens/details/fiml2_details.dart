@@ -4,20 +4,20 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:se380_project/screens/book/book_now.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class Film1D extends StatefulWidget {
-  const Film1D({Key? key}) : super(key: key);
+class Film2D extends StatefulWidget {
+  const Film2D({Key? key}) : super(key: key);
 
   @override
-  State<Film1D> createState() => _Film1DState();
+  _Film2DState createState() => _Film2DState();
 }
 
-class _Film1DState extends State<Film1D> {
+class _Film2DState extends State<Film2D> {
   YoutubePlayerController _controller = YoutubePlayerController(
-      initialVideoId: "-FmWuCgJmxo",
+      initialVideoId: "Z9PIawNKagU",
       flags: YoutubePlayerFlags(autoPlay: false));
-  String filmName = 'Venom 2';
   @override
   Widget build(BuildContext context) {
+    String filmName = 'Spider-Man: No Way Home';
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -39,7 +39,7 @@ class _Film1DState extends State<Film1D> {
                     child: Container(
                       padding: EdgeInsets.only(top: 15),
                       child: Text(
-                        "Venom: Let There Be Carnage",
+                        "Spider-Man: No Way Home",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
@@ -65,7 +65,7 @@ class _Film1DState extends State<Film1D> {
                     child: RatingBar.builder(
                       //flutter pub.dev'den alındı
                       itemSize: 30,
-                      initialRating: 3.5,
+                      initialRating: 4.5,
                       minRating: 1,
                       direction: Axis.horizontal,
                       allowHalfRating: true,
@@ -119,7 +119,7 @@ class _Film1DState extends State<Film1D> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(200),
                           ),
-                          child: Text("Sci-Fi",
+                          child: Text("Fantasy",
                               style: TextStyle(fontWeight: FontWeight.bold)),
                         ),
                       ],
@@ -147,7 +147,7 @@ class _Film1DState extends State<Film1D> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage("images/tm_photo.jpg"),
+                              image: AssetImage("images/TomHolland.jpg"),
                               fit: BoxFit.fill),
                           color: Colors.amber,
                         ),
@@ -156,7 +156,7 @@ class _Film1DState extends State<Film1D> {
                         height: 100,
                       ),
                       Text(
-                        "Tom Hardy",
+                        "Tom Holland",
                         style: GoogleFonts.actor(color: Colors.black),
                       ),
                     ],
@@ -167,7 +167,7 @@ class _Film1DState extends State<Film1D> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage("images/wd_photo.jpg"),
+                              image: AssetImage("images/Zendaya.jpg"),
                               fit: BoxFit.fill),
                           color: Colors.amber,
                         ),
@@ -176,7 +176,7 @@ class _Film1DState extends State<Film1D> {
                         height: 100,
                       ),
                       Text(
-                        "Woody Harrelson",
+                        "Zendaya",
                         style: GoogleFonts.actor(color: Colors.black),
                       ),
                     ],
@@ -187,7 +187,7 @@ class _Film1DState extends State<Film1D> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage("images/mw_photo.jpg"),
+                              image: AssetImage("images/benedict.jpg"),
                               fit: BoxFit.fill),
                           color: Colors.amber,
                         ),
@@ -196,7 +196,7 @@ class _Film1DState extends State<Film1D> {
                         height: 100,
                       ),
                       Text(
-                        "Michelle Williams",
+                        "Benedict Cumberbatch",
                         style: GoogleFonts.actor(color: Colors.black),
                       ),
                     ],
@@ -207,7 +207,7 @@ class _Film1DState extends State<Film1D> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage("images/nh_photo.jpg"),
+                              image: AssetImage("images/andrew.jpg"),
                               fit: BoxFit.fill),
                           color: Colors.amber,
                         ),
@@ -216,7 +216,7 @@ class _Film1DState extends State<Film1D> {
                         height: 100,
                       ),
                       Text(
-                        "Naomie Harris",
+                        "Andrew Garfield",
                         style: GoogleFonts.actor(color: Colors.black),
                       ),
                     ],
@@ -227,7 +227,7 @@ class _Film1DState extends State<Film1D> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage("images/sg_photo.jpg"),
+                              image: AssetImage("images/tobey.jpg"),
                               fit: BoxFit.fill),
                           color: Colors.amber,
                         ),
@@ -236,7 +236,7 @@ class _Film1DState extends State<Film1D> {
                         height: 100,
                       ),
                       Text(
-                        "Stephen Graham",
+                        "Tobey Maguire",
                         style: GoogleFonts.actor(color: Colors.black),
                       ),
                     ],
@@ -262,7 +262,7 @@ class _Film1DState extends State<Film1D> {
                           style: GoogleFonts.actor(
                               fontWeight: FontWeight.bold, fontSize: 16)),
                       Text(
-                        "Andy Serkis",
+                        "Jon Watts",
                         style: GoogleFonts.actor(fontSize: 16),
                       )
                     ]),
@@ -288,7 +288,7 @@ class _Film1DState extends State<Film1D> {
                           style: GoogleFonts.actor(
                               fontWeight: FontWeight.bold, fontSize: 16)),
                       Text(
-                        "1h 37m",
+                        "2h 28m",
                         style: GoogleFonts.actor(fontSize: 16),
                       )
                     ]),
@@ -301,7 +301,7 @@ class _Film1DState extends State<Film1D> {
                           style: GoogleFonts.actor(
                               fontWeight: FontWeight.bold, fontSize: 16)),
                       Text(
-                        "Marvel Entertainment, \nPascal Pictures, \nSony Pictures Entertainment (SPE)",
+                        "Marvel Studios, \nPascal Pictures, \nColumbia Pictures",
                         style: GoogleFonts.actor(fontSize: 16),
                       )
                     ]),
@@ -322,7 +322,7 @@ class _Film1DState extends State<Film1D> {
                 Container(
                   margin: EdgeInsets.fromLTRB(20, 15, 20, 15),
                   child: Text(
-                    "Eddie Brock struggles to adjust to his new life as the host of the alien symbiote Venom, which grants him super-human abilities in order to be a lethal vigilante. Brock attempts to reignite his career by interviewing serial killer Cletus Kasady, who becomes the host of the symbiote Carnage and escapes prison after a failed execution.",
+                    "Peter Parker's secret identity is revealed to the entire world. Desperate for help, Peter turns to Doctor Strange to make the world forget that he is Spider-Man. The spell goes horribly wrong and shatters the multiverse, bringing in monstrous villains that could destroy the world.",
                     style: TextStyle(
                       color: Colors.grey.shade700,
                       fontSize: 20,
@@ -343,7 +343,7 @@ class _Film1DState extends State<Film1D> {
                       ),
                     ),
                   );
-                }, //eklencek
+                },
                 child: Text(
                   "BOOK NOW",
                   style: TextStyle(color: Colors.white, fontSize: 18),
