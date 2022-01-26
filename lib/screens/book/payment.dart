@@ -38,7 +38,8 @@ class PaymentPage extends StatelessWidget {
             child: TextField(
               keyboardType: TextInputType.name,
               decoration: InputDecoration(
-                contentPadding: new EdgeInsets.only(left: 30),
+                icon: Icon(Icons.person),
+                contentPadding: new EdgeInsets.only(left: 10),
                 border: InputBorder.none,
                 hintText: "Name and Surname",
                 hintStyle: TextStyle(
@@ -67,7 +68,8 @@ class PaymentPage extends StatelessWidget {
                     19) //=> 3 tane boş koyduğu için 19 yaptım
               ],
               decoration: InputDecoration(
-                contentPadding: new EdgeInsets.only(left: 30),
+                icon: Icon(Icons.credit_card),
+                contentPadding: new EdgeInsets.only(left: 10),
                 border: InputBorder.none,
                 hintText: "Credit Card Number",
                 hintStyle: TextStyle(
@@ -95,7 +97,8 @@ class PaymentPage extends StatelessWidget {
                 LengthLimitingTextInputFormatter(10)
               ],
               decoration: InputDecoration(
-                contentPadding: new EdgeInsets.only(left: 30),
+                icon: Icon(Icons.calendar_today),
+                contentPadding: new EdgeInsets.only(left: 10),
                 border: InputBorder.none,
                 hintText: "Date",
                 hintStyle: TextStyle(
@@ -120,7 +123,8 @@ class PaymentPage extends StatelessWidget {
               keyboardType: TextInputType.number,
               inputFormatters: [LengthLimitingTextInputFormatter(3)],
               decoration: InputDecoration(
-                contentPadding: new EdgeInsets.only(left: 30),
+                icon: Icon(Icons.lock),
+                contentPadding: new EdgeInsets.only(left: 10),
                 border: InputBorder.none,
                 hintText: "CVV",
                 hintStyle: TextStyle(
