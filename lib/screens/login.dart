@@ -27,7 +27,7 @@ class _LoginState extends State<Login> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  padding: EdgeInsets.all(5),
+                  padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
                     color: Colors.white.withOpacity(.4),
                     borderRadius: BorderRadius.circular(200),
@@ -42,7 +42,7 @@ class _LoginState extends State<Login> {
                   child: Column(
                     children: [
                       Container(
-                        padding: EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(8.0),
                         decoration: BoxDecoration(
                           border: Border(
                             bottom:
@@ -51,14 +51,14 @@ class _LoginState extends State<Login> {
                         ),
                         child: TextField(
                           keyboardType: TextInputType.emailAddress,
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             border: InputBorder.none,
                             hintText: "Email",
                             hintStyle: TextStyle(
                               color: Colors.white,
                             ),
                             contentPadding:
-                                new EdgeInsets.fromLTRB(20, 10, 100, 10),
+                                EdgeInsets.fromLTRB(20, 10, 100, 10),
                           ),
                           onChanged: (value) {
                             setState(() {
@@ -94,7 +94,7 @@ class _LoginState extends State<Login> {
                       style: ElevatedButton.styleFrom(
                         primary: Colors.black.withOpacity(.1),
                       ),
-                      child: Text(
+                      child: const Text(
                         "Login",
                       ),
                       onPressed: () {
@@ -123,7 +123,7 @@ class _LoginState extends State<Login> {
                 ),
                 Container(
                   margin: EdgeInsets.only(top: 50),
-                  child: TextButton(
+                  child: const TextButton(
                     onPressed: null,
                     child: Text(
                       "Forgot Password",

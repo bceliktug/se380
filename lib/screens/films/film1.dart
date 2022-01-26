@@ -24,13 +24,13 @@ class Film1 extends StatelessWidget {
             InkWell(
               onTap: () => Navigator.of(context).push(
                 CustomPageRoutef(
-                  child: Film1D(),
+                  child: const Film1D(),
                 ),
               ),
               child: Container(
                 height: 470,
                 width: 200,
-                margin: EdgeInsets.fromLTRB(50, 200, 50, 0),
+                margin: const EdgeInsets.fromLTRB(50, 200, 50, 0),
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
@@ -46,11 +46,11 @@ class Film1 extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Container(
-                      margin: EdgeInsets.fromLTRB(60, 10, 60, 0),
+                      margin: const EdgeInsets.fromLTRB(60, 10, 60, 0),
                       height: 280,
                       width: 25,
                       decoration: BoxDecoration(
-                        image: DecorationImage(
+                        image: const DecorationImage(
                             image: AssetImage("images/venom2-sa.png"),
                             fit: BoxFit.fitHeight),
                         color: Colors.black,
@@ -59,10 +59,10 @@ class Film1 extends StatelessWidget {
                     ),
                     Center(
                       child: Container(
-                        padding: EdgeInsets.only(top: 5),
-                        child: Text(
+                        padding: const EdgeInsets.only(top: 5),
+                        child: const Text(
                           "Venom: Let There Be Carnage",
-                          style: TextStyle(
+                          style:  TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 18),
                         ),
                       ),
@@ -70,14 +70,14 @@ class Film1 extends StatelessWidget {
                     Column(
                       children: [
                         Container(
-                          padding: EdgeInsets.only(top: 5),
-                          child: Text(
+                          padding: const EdgeInsets.only(top: 5),
+                          child: const Text(
                             "IMDB Point:",
-                            style: TextStyle(fontWeight: FontWeight.bold),
+                            style: const TextStyle(fontWeight: FontWeight.bold),
                           ),
                         ),
                         Container(
-                          padding: EdgeInsets.only(top: 5),
+                          padding: const EdgeInsets.only(top: 5),
                           child: RatingBar.builder(
                             //flutter pub.dev'den alındı
                             itemSize: 30,
@@ -86,8 +86,8 @@ class Film1 extends StatelessWidget {
                             direction: Axis.horizontal,
                             allowHalfRating: true,
                             itemCount: 5,
-                            itemPadding: EdgeInsets.symmetric(horizontal: 6.0),
-                            itemBuilder: (context, _) => Icon(
+                            itemPadding: const EdgeInsets.symmetric(horizontal: 6.0),
+                            itemBuilder: (context, _) => const Icon(
                               Icons.star,
                               color: Colors.amber,
                             ),
@@ -97,12 +97,12 @@ class Film1 extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          padding: EdgeInsets.only(top: 5),
+                          padding: const EdgeInsets.only(top: 5),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
                               Container(
-                                padding: EdgeInsets.fromLTRB(3, 3, 3, 3),
+                                padding: const EdgeInsets.fromLTRB(3, 3, 3, 3),
                                 decoration: BoxDecoration(
                                   /* boxShadow: [
                                     BoxShadow(
@@ -113,9 +113,9 @@ class Film1 extends StatelessWidget {
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(200),
                                 ),
-                                child: Text(
+                                child: const Text(
                                   "Action",
-                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                  style: const TextStyle(fontWeight: FontWeight.bold),
                                 ),
                               ),
                               Container(
@@ -124,19 +124,19 @@ class Film1 extends StatelessWidget {
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(200),
                                 ),
-                                padding: EdgeInsets.fromLTRB(3, 3, 3, 3),
-                                child: Text("Adventure",
+                                padding: const EdgeInsets.fromLTRB(3, 3, 3, 3),
+                                child: const Text("Adventure",
                                     style:
                                         TextStyle(fontWeight: FontWeight.bold)),
                               ),
                               Container(
-                                padding: EdgeInsets.fromLTRB(3, 3, 3, 3),
+                                padding: const EdgeInsets.fromLTRB(3, 3, 3, 3),
                                 decoration: BoxDecoration(
                                   border: Border.all(color: Colors.grey),
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(200),
                                 ),
-                                child: Text("Sci-Fi",
+                                child: const Text("Sci-Fi",
                                     style:
                                         TextStyle(fontWeight: FontWeight.bold)),
                               ),
@@ -144,7 +144,7 @@ class Film1 extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          padding: EdgeInsets.only(top: 10),
+                          padding: const EdgeInsets.only(top: 10),
                           child: ElevatedButton(
                             onPressed: () {
                               Navigator.of(context).push(
@@ -155,9 +155,9 @@ class Film1 extends StatelessWidget {
                                 ),
                               );
                             },
-                            child: Text(
+                            child: const Text(
                               "BOOK NOW",
-                              style: TextStyle(color: Colors.white),
+                              style: const TextStyle(color: Colors.white),
                             ),
                             style: ElevatedButton.styleFrom(
                               primary: Colors.black,

@@ -14,7 +14,7 @@ class Film1D extends StatefulWidget {
 class _Film1DState extends State<Film1D> {
   YoutubePlayerController _controller = YoutubePlayerController(
       initialVideoId: "-FmWuCgJmxo",
-      flags: YoutubePlayerFlags(autoPlay: false));
+      flags: const YoutubePlayerFlags(autoPlay: false));
   String filmName = 'Venom 2';
   @override
   Widget build(BuildContext context) {
@@ -25,20 +25,20 @@ class _Film1DState extends State<Film1D> {
           children: [
             Container(
                 height: 300,
-                decoration: BoxDecoration(color: Colors.red),
+                decoration: const BoxDecoration(color: Colors.red),
                 child: YoutubePlayer(
                   controller: _controller,
                   showVideoProgressIndicator: true,
                   progressIndicatorColor: Colors.redAccent,
                 )),
             Container(
-              decoration: BoxDecoration(color: Colors.white),
+              decoration: const BoxDecoration(color: Colors.white),
               child: Column(
                 children: [
                   Center(
                     child: Container(
-                      padding: EdgeInsets.only(top: 15),
-                      child: Text(
+                      padding: const EdgeInsets.only(top: 15),
+                      child: const Text(
                         "Venom: Let There Be Carnage",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
@@ -51,14 +51,14 @@ class _Film1DState extends State<Film1D> {
               ),
             ),
             Container(
-              margin: EdgeInsets.fromLTRB(50, 0, 50, 0),
+              margin: const EdgeInsets.fromLTRB(50, 0, 50, 0),
               child: Column(
                 children: [
                   Container(
-                    padding: EdgeInsets.only(top: 20),
-                    child: Text(
+                    padding: const EdgeInsets.only(top: 20),
+                    child: const Text(
                       "IMDB Point:",
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: const TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ),
                   Container(
@@ -70,8 +70,8 @@ class _Film1DState extends State<Film1D> {
                       direction: Axis.horizontal,
                       allowHalfRating: true,
                       itemCount: 5,
-                      itemPadding: EdgeInsets.symmetric(horizontal: 6.0),
-                      itemBuilder: (context, _) => Icon(
+                      itemPadding: const EdgeInsets.symmetric(horizontal: 6.0),
+                      itemBuilder: (context, _) => const Icon(
                         Icons.star,
                         color: Colors.amber,
                       ),
@@ -81,12 +81,12 @@ class _Film1DState extends State<Film1D> {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.only(top: 10),
+                    padding: const EdgeInsets.only(top: 10),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Container(
-                          padding: EdgeInsets.fromLTRB(3, 3, 3, 3),
+                          padding: const EdgeInsets.fromLTRB(3, 3, 3, 3),
                           decoration: BoxDecoration(
                             /* boxShadow: [
                                       BoxShadow(
@@ -97,7 +97,7 @@ class _Film1DState extends State<Film1D> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(200),
                           ),
-                          child: Text(
+                          child: const Text(
                             "Action",
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
@@ -108,18 +108,19 @@ class _Film1DState extends State<Film1D> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(200),
                           ),
-                          padding: EdgeInsets.fromLTRB(3, 3, 3, 3),
-                          child: Text("Adventure",
-                              style: TextStyle(fontWeight: FontWeight.bold)),
+                          padding: const EdgeInsets.fromLTRB(3, 3, 3, 3),
+                          child: const Text("Adventure",
+                              style:
+                                  const TextStyle(fontWeight: FontWeight.bold)),
                         ),
                         Container(
-                          padding: EdgeInsets.fromLTRB(3, 3, 3, 3),
+                          padding: const EdgeInsets.fromLTRB(3, 3, 3, 3),
                           decoration: BoxDecoration(
                             border: Border.all(color: Colors.grey),
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(200),
                           ),
-                          child: Text("Sci-Fi",
+                          child: const Text("Sci-Fi",
                               style: TextStyle(fontWeight: FontWeight.bold)),
                         ),
                       ],
@@ -129,7 +130,7 @@ class _Film1DState extends State<Film1D> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 20),
+              margin: const EdgeInsets.only(top: 20),
               alignment: Alignment.centerLeft,
               child: Text("  CAST",
                   style: GoogleFonts.actor(
@@ -146,12 +147,12 @@ class _Film1DState extends State<Film1D> {
                       Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          image: DecorationImage(
-                              image: AssetImage("images/tm_photo.jpg"),
+                          image: const DecorationImage(
+                              image: const AssetImage("images/tm_photo.jpg"),
                               fit: BoxFit.fill),
                           color: Colors.amber,
                         ),
-                        margin: EdgeInsets.all(10),
+                        margin: const EdgeInsets.all(10),
                         width: 90,
                         height: 100,
                       ),
@@ -166,12 +167,12 @@ class _Film1DState extends State<Film1D> {
                       Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          image: DecorationImage(
+                          image: const DecorationImage(
                               image: AssetImage("images/wd_photo.jpg"),
                               fit: BoxFit.fill),
                           color: Colors.amber,
                         ),
-                        margin: EdgeInsets.all(10),
+                        margin: const EdgeInsets.all(10),
                         width: 90,
                         height: 100,
                       ),
@@ -186,12 +187,12 @@ class _Film1DState extends State<Film1D> {
                       Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          image: DecorationImage(
-                              image: AssetImage("images/mw_photo.jpg"),
+                          image: const DecorationImage(
+                              image: const AssetImage("images/mw_photo.jpg"),
                               fit: BoxFit.fill),
                           color: Colors.amber,
                         ),
-                        margin: EdgeInsets.all(10),
+                        margin: const EdgeInsets.all(10),
                         width: 90,
                         height: 100,
                       ),
@@ -206,12 +207,12 @@ class _Film1DState extends State<Film1D> {
                       Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          image: DecorationImage(
+                          image: const DecorationImage(
                               image: AssetImage("images/nh_photo.jpg"),
                               fit: BoxFit.fill),
                           color: Colors.amber,
                         ),
-                        margin: EdgeInsets.all(10),
+                        margin: const EdgeInsets.all(10),
                         width: 90,
                         height: 100,
                       ),
@@ -226,12 +227,12 @@ class _Film1DState extends State<Film1D> {
                       Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          image: DecorationImage(
-                              image: AssetImage("images/sg_photo.jpg"),
+                          image: const DecorationImage(
+                              image: const AssetImage("images/sg_photo.jpg"),
                               fit: BoxFit.fill),
                           color: Colors.amber,
                         ),
-                        margin: EdgeInsets.all(10),
+                        margin: const EdgeInsets.all(10),
                         width: 90,
                         height: 100,
                       ),
@@ -245,7 +246,7 @@ class _Film1DState extends State<Film1D> {
               ),
             ),
             Container(
-              margin: EdgeInsets.fromLTRB(25, 50, 25, 25),
+              margin: const EdgeInsets.fromLTRB(25, 50, 25, 25),
               height: 200,
               width: 100,
               decoration: BoxDecoration(
@@ -255,8 +256,8 @@ class _Film1DState extends State<Film1D> {
               child: Column(
                 children: [
                   Container(
-                    margin: EdgeInsets.all(10),
-                    alignment: FractionalOffset(0.0, 1.0),
+                    margin: const EdgeInsets.all(10),
+                    alignment: const FractionalOffset(0.0, 1.0),
                     child: Row(children: [
                       Text("Directed By : ",
                           style: GoogleFonts.actor(
@@ -268,8 +269,8 @@ class _Film1DState extends State<Film1D> {
                     ]),
                   ),
                   Container(
-                    margin: EdgeInsets.all(10),
-                    alignment: FractionalOffset(0.0, 1.0),
+                    margin: const EdgeInsets.all(10),
+                    alignment: const FractionalOffset(0.0, 1.0),
                     child: Row(children: [
                       Text("Year : ",
                           style: GoogleFonts.actor(
@@ -281,8 +282,8 @@ class _Film1DState extends State<Film1D> {
                     ]),
                   ),
                   Container(
-                    margin: EdgeInsets.all(10),
-                    alignment: FractionalOffset(0.0, 1.0),
+                    margin: const EdgeInsets.all(10),
+                    alignment: const FractionalOffset(0.0, 1.0),
                     child: Row(children: [
                       Text("Duration : ",
                           style: GoogleFonts.actor(
@@ -294,8 +295,8 @@ class _Film1DState extends State<Film1D> {
                     ]),
                   ),
                   Container(
-                    margin: EdgeInsets.all(10),
-                    alignment: FractionalOffset(0.0, 1.0),
+                    margin: const EdgeInsets.all(10),
+                    alignment: const FractionalOffset(0.0, 1.0),
                     child: Row(children: [
                       Text("Production : ",
                           style: GoogleFonts.actor(
@@ -313,14 +314,14 @@ class _Film1DState extends State<Film1D> {
               children: [
                 Container(
                   alignment: new FractionalOffset(0.0, 1.0),
-                  margin: EdgeInsets.only(left: 20),
-                  child: Text(
+                  margin: const EdgeInsets.only(left: 20),
+                  child: const Text(
                     "Storyline",
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(20, 15, 20, 15),
+                  margin: const EdgeInsets.fromLTRB(20, 15, 20, 15),
                   child: Text(
                     "Eddie Brock struggles to adjust to his new life as the host of the alien symbiote Venom, which grants him super-human abilities in order to be a lethal vigilante. Brock attempts to reignite his career by interviewing serial killer Cletus Kasady, who becomes the host of the symbiote Carnage and escapes prison after a failed execution.",
                     style: TextStyle(
@@ -333,7 +334,7 @@ class _Film1DState extends State<Film1D> {
             ),
             Container(
               height: 100,
-              padding: EdgeInsets.fromLTRB(30, 20, 30, 20),
+              padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
@@ -344,7 +345,7 @@ class _Film1DState extends State<Film1D> {
                     ),
                   );
                 }, //eklencek
-                child: Text(
+                child: const Text(
                   "BOOK NOW",
                   style: TextStyle(color: Colors.white, fontSize: 18),
                 ),

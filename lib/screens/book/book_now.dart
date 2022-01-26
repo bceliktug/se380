@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:se380_project/screens/book/payment.dart';
 import 'package:se380_project/widgets/cine_rows.dart';
 import 'package:se380_project/widgets/cine_screen.dart';
 import 'package:se380_project/widgets/datetime_model.dart';
@@ -342,7 +343,7 @@ class _BooknowState extends State<Booknow> {
                   ),
                   child: Container(
                     margin: EdgeInsets.all(10),
-                    child: Text(
+                    child: const Text(
                       "Pay",
                       style: TextStyle(
                           color: Colors.green,
@@ -350,7 +351,10 @@ class _BooknowState extends State<Booknow> {
                           fontSize: 25),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const PaymentPage()));
+                  },
                 )
               ],
             ),
